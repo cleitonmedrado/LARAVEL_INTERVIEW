@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Support\Facades\Storage;
 
 class ChatController extends Controller
 {
@@ -68,7 +69,7 @@ class ChatController extends Controller
         if (!empty($request->input('mensagem'))) {
             $mensagem = new Mensagens([
                 'chat_id' => $chat->id,
-                'id_origem' => auth()->id(),
+                'id_origem' => auth()->user()->id,
                 'id_destino' => $id_destino,
                 'mensagem' => $request->input('mensagem'),
                 'url' => '',
@@ -78,7 +79,7 @@ class ChatController extends Controller
             if ($request->hasFile('anexo')) {
                 $anexo = $request->file('anexo');
                 $path = $anexo->store('anexos', 'public');
-                $mensagem->url = $path;
+                $mensagem->url = Storage::url($path);
 
                 $extensao = $anexo->getClientOriginalExtension();
                 if (in_array($extensao, ['mp3', 'wav', 'ogg'])) {
