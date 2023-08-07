@@ -16,14 +16,14 @@
                         <div class="balao-mensagem">
                             @if($mensagem->tipo_anexo === 'audio')
                                 <audio controls>
-                                    <source src="{{ asset('storage/' . $mensagem->url) }}" type="audio/mpeg">
+                                    <source src="{{ asset($mensagem->url) }}" type="audio/mpeg">
                                     Seu navegador não suporta o elemento de áudio.
                                 </audio>
                             @elseif($mensagem->tipo_anexo === 'imagem')
-                                <img src="{{ asset('storage/' . $mensagem->url) }}" alt="Imagem"
+                                <img src="{{ asset($mensagem->url) }}" alt="Imagem"
                                      class="mensagem-imagem">
                             @elseif($mensagem->tipo_anexo === 'arquivo')
-                                <a href="{{ asset('storage/' . $mensagem->url) }}" target="_blank">Baixar Arquivo</a>
+                                <a href="{{ asset($mensagem->url) }}" target="_blank">Baixar Arquivo</a>
                             @endif
                             {{ $mensagem->mensagem }}
                         </div>

@@ -25,6 +25,7 @@ class ServicoController extends Controller
         if (!$servico) {
             return redirect()->route('servicos');
         }
+
         return view('servicos/create', compact('servico'));
     }
 
@@ -39,16 +40,16 @@ class ServicoController extends Controller
         try {
             $servico->titulo = $request->titulo;
             $servico->descricao = $request->descricao;
-            $imagem = str_replace('/storage', 'public', $servico->url);
+            $imagem = $servico->url;
             if ($request->hasFile('nova_imagem')) {
                 // Deletar a imagem atual se existir
-                if (Storage::exists($imagem)) {
-                    Storage::delete($imagem);
+                if (file_exists(public_path($imagem))) {
+                    unlink(public_path($imagem));
                 }
                 $novaImagem = $request->file('nova_imagem');
                 $caminhoNovaImagem = $novaImagem->store('imagens/servicos', 'public');
                 // Atualizar o caminho da nova imagem no banco de dados
-                $servico->url = Storage::url($caminhoNovaImagem);
+                $servico->url = $caminhoNovaImagem;
             }
             $servico->save();
             session()->flash('success', 'Salvo com sucesso!');

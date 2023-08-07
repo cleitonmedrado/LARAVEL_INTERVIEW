@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'laravel/laravel',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => 'd1cbc06aa45893f9522da5c6eb266e161f325aeb',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -16,6 +16,15 @@
             'reference' => '73e5b88775c64ccc0b84fb60836b30dc9d92ac4a',
             'type' => 'library',
             'install_path' => __DIR__ . '/../asm89/stack-cors',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'aws/aws-sdk-php' => array(
+            'pretty_version' => '2.8.31',
+            'version' => '2.8.31.0',
+            'reference' => '64fa4b07f056e338a5f0f29eece75babaa83af68',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../aws/aws-sdk-php',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
@@ -148,6 +157,147 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'guzzle/batch' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => 'v3.8.1',
+            ),
+        ),
+        'guzzle/cache' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => 'v3.8.1',
+            ),
+        ),
+        'guzzle/common' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => 'v3.8.1',
+            ),
+        ),
+        'guzzle/guzzle' => array(
+            'pretty_version' => 'v3.8.1',
+            'version' => '3.8.1.0',
+            'reference' => '4de0618a01b34aa1c8c33a3f13f396dcd3882eba',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../guzzle/guzzle',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'guzzle/http' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => 'v3.8.1',
+            ),
+        ),
+        'guzzle/inflection' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => 'v3.8.1',
+            ),
+        ),
+        'guzzle/iterator' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => 'v3.8.1',
+            ),
+        ),
+        'guzzle/log' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => 'v3.8.1',
+            ),
+        ),
+        'guzzle/parser' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => 'v3.8.1',
+            ),
+        ),
+        'guzzle/plugin' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => 'v3.8.1',
+            ),
+        ),
+        'guzzle/plugin-async' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => 'v3.8.1',
+            ),
+        ),
+        'guzzle/plugin-backoff' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => 'v3.8.1',
+            ),
+        ),
+        'guzzle/plugin-cache' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => 'v3.8.1',
+            ),
+        ),
+        'guzzle/plugin-cookie' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => 'v3.8.1',
+            ),
+        ),
+        'guzzle/plugin-curlauth' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => 'v3.8.1',
+            ),
+        ),
+        'guzzle/plugin-error-response' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => 'v3.8.1',
+            ),
+        ),
+        'guzzle/plugin-history' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => 'v3.8.1',
+            ),
+        ),
+        'guzzle/plugin-log' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => 'v3.8.1',
+            ),
+        ),
+        'guzzle/plugin-md5' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => 'v3.8.1',
+            ),
+        ),
+        'guzzle/plugin-mock' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => 'v3.8.1',
+            ),
+        ),
+        'guzzle/plugin-oauth' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => 'v3.8.1',
+            ),
+        ),
+        'guzzle/service' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => 'v3.8.1',
+            ),
+        ),
+        'guzzle/stream' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => 'v3.8.1',
+            ),
+        ),
         'guzzlehttp/guzzle' => array(
             'pretty_version' => '7.7.0',
             'version' => '7.7.0.0',
@@ -158,18 +308,18 @@
             'dev_requirement' => false,
         ),
         'guzzlehttp/promises' => array(
-            'pretty_version' => '2.0.0',
-            'version' => '2.0.0.0',
-            'reference' => '3a494dc7dc1d7d12e511890177ae2d0e6c107da6',
+            'pretty_version' => '2.0.1',
+            'version' => '2.0.1.0',
+            'reference' => '111166291a0f8130081195ac4556a5587d7f1b5d',
             'type' => 'library',
             'install_path' => __DIR__ . '/../guzzlehttp/promises',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'guzzlehttp/psr7' => array(
-            'pretty_version' => '2.5.0',
-            'version' => '2.5.0.0',
-            'reference' => 'b635f279edd83fc275f822a1188157ffea568ff6',
+            'pretty_version' => '2.6.0',
+            'version' => '2.6.0.0',
+            'reference' => '8bd7c33a0734ae1c5d074360512beb716bef3f77',
             'type' => 'library',
             'install_path' => __DIR__ . '/../guzzlehttp/psr7',
             'aliases' => array(),
@@ -386,9 +536,9 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'd1cbc06aa45893f9522da5c6eb266e161f325aeb',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -458,18 +608,18 @@
             'dev_requirement' => false,
         ),
         'league/mime-type-detection' => array(
-            'pretty_version' => '1.11.0',
-            'version' => '1.11.0.0',
-            'reference' => 'ff6248ea87a9f116e78edd6002e39e5128a0d4dd',
+            'pretty_version' => '1.12.0',
+            'version' => '1.12.0.0',
+            'reference' => 'c7f2872fb273bf493811473dafc88d60ae829f48',
             'type' => 'library',
             'install_path' => __DIR__ . '/../league/mime-type-detection',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'mockery/mockery' => array(
-            'pretty_version' => '1.5.1',
-            'version' => '1.5.1.0',
-            'reference' => 'e92dcc83d5a51851baf5f5591d32cb2b16e3684e',
+            'pretty_version' => '1.6.5',
+            'version' => '1.6.5.0',
+            'reference' => '68782e943f9ffcbc72bda08aedabe73fecb50041',
             'type' => 'library',
             'install_path' => __DIR__ . '/../mockery/mockery',
             'aliases' => array(),
@@ -864,9 +1014,9 @@
             'dev_requirement' => true,
         ),
         'sebastian/global-state' => array(
-            'pretty_version' => '5.0.5',
-            'version' => '5.0.5.0',
-            'reference' => '0ca8db5a5fc9c8646244e629625ac486fa286bf2',
+            'pretty_version' => '5.0.6',
+            'version' => '5.0.6.0',
+            'reference' => 'bde739e7565280bda77be70044ac1047bc007e34',
             'type' => 'library',
             'install_path' => __DIR__ . '/../sebastian/global-state',
             'aliases' => array(),

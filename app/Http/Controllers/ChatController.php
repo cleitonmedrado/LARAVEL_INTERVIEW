@@ -63,12 +63,12 @@ class ChatController extends Controller
             $chat->save();
         }
 
-        $id_destino = ($chat->servico->user_id == auth()->user()->id) ? $chat->user_id_chat : $chat->servico->user_id;
+        $id_destino = ($chat->servico->user_id == auth()->id()) ? $chat->user_id_chat : $chat->servico->user_id;
 
         if (!empty($request->input('mensagem'))) {
             $mensagem = new Mensagens([
                 'chat_id' => $chat->id,
-                'id_origem' => auth()->user()->id,
+                'id_origem' => auth()->id(),
                 'id_destino' => $id_destino,
                 'mensagem' => $request->input('mensagem'),
                 'url' => '',
